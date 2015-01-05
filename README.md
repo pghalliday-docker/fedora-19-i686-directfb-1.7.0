@@ -19,7 +19,10 @@ In order to launch GUI apps and use the host XServer it is necessary to map the 
 Also use linux32 so that package managers and such don't get confused about the architecture
 
 ```
-sudo docker run -ti -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix pghalliday/fedora-19-i686-directfb-1.7.0 /bin/linux32
+sudo docker run -ti \
+-e DISPLAY=$DISPLAY \
+-v /tmp/.X11-unix:/tmp/.X11-unix \
+pghalliday/fedora-19-i686-directfb-1.7.0 /bin/linux32
 ```
 
 Then `uname -m` will report `i686`
