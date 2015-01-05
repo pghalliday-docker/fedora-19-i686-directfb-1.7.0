@@ -16,3 +16,4 @@ WORKDIR /opt/DirectFB-1.7.0
 RUN linux32 ./configure
 RUN linux32 make
 RUN linux32 make install
+WORKDIR /
